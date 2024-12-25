@@ -19,6 +19,14 @@ export const Container = styled.div`
   .localização {
     font-size: 60px;
     color: rgb(0, 6, 92);
+
+    @media (max-width: 768px) {
+      font-size: 40px;
+
+      margin-top: 20px;
+
+      color: #fff;
+    }
   }
 
   .cidade {
@@ -26,6 +34,7 @@ export const Container = styled.div`
     font-weight: 900;
 
     color: #fff;
+
   }
 `;
 
@@ -35,12 +44,21 @@ export const ContainerMap = styled.div`
   justify-content: center;
   text-align: center;
   gap: 100px;
+
+  @media (max-width: 768px) {
+      display: flex;
+      flex-direction: column;
+    }
 `;
 
 export const ContainerCarpina = styled.div`
   iframe {
     width: 500px;
     height: 300px;
+
+    @media (max-width: 768px) {
+      width: 370px;
+    }
   }
 `;
 
@@ -48,5 +66,9 @@ export const ContainerLagoa = styled.div`
   iframe {
     width: 500px;
     height: 300px;
+
+    @media (max-width: 768px) {
+      width: 370px;
+    }
   }
 `;
