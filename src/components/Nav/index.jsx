@@ -1,6 +1,6 @@
 import { Button, Container, Image, NavContainer } from "./styles";
 
-import Logo from "../../assets/logo.png";
+import Logo from "/Logo.png";
 import { Link } from "react-router-dom";
 
 export function Nav() {
