@@ -25,7 +25,7 @@ export function Planos() {
           {planos.map((item) => (
             <div key={item.id} className="plano-button">
               <img src={item.image} alt="planos" className="plano-item" />
-              <button>Assine já</button>
+              <button to="/contato">Assine já</button>
             </div>
           ))}
         </ContainerPlanos>
