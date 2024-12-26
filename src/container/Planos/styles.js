@@ -60,7 +60,11 @@ export const ContainerPlanos = styled.div`
     width: 350px;
   }
 
-  button {
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     width: 190px;
     height: 40px;
 
@@ -71,7 +75,7 @@ export const ContainerPlanos = styled.div`
 
     background: rgb(69, 169, 250);
     color: #fff;
-
+    
     font-size: 23px;
     font-weight: 700;
 
@@ -84,6 +88,7 @@ export const ContainerPlanos = styled.div`
     &:active {
       opacity: 0.4;
     }
+
   }
 `;
 

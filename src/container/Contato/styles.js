@@ -103,12 +103,18 @@ export const Button = styled.button`
   border-radius: 5px;
   border: none;
 
+  cursor: pointer;
+
   background: rgb(6, 120, 214);
 
   color: #fff;
 
   font-size: 19px;
   font-weight: 900;
+
+  &:active {
+    opacity: 0.4;
+  }
 `;
 
 export const ContainerInfo = styled.div`

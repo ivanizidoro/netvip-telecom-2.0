@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Footer } from "../../components/Footer";
 import { Header } from "../Header";
 import { Container, ContainerPlanos, H2 } from "./styles";
@@ -25,7 +26,7 @@ export function Planos() {
           {planos.map((item) => (
             <div key={item.id} className="plano-button">
               <img src={item.image} alt="planos" className="plano-item" />
-              <button to="/contato">Assine já</button>
+              <Link to="/contato" className="text-white">Assine já</Link>
             </div>
           ))}
         </ContainerPlanos>

@@ -7,6 +7,7 @@ const globalStyle = createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
     font-family: "Chakra Petch", serif;
+    text-decoration: none;
 }
 `;
 
