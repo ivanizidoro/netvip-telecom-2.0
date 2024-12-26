@@ -66,9 +66,11 @@ export const Container = styled.div`
       margin-top: 20px;
 
       @media (max-width: 768px) {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-columns: repeat(1, minmax(0, 1fr));
 
+        height: 400px;
         gap: 10px;
+
       }
     }
 
@@ -76,7 +78,11 @@ export const Container = styled.div`
       height: 30px;
       width: 304px;
 
-      margin-top: 10px;
+      margin-top: 20px;
+
+      @media (max-width: 768px) {
+        margin-top: 10px;
+      }
     }
   }
 
