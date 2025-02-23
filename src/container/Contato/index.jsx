@@ -130,7 +130,6 @@ export function Contato() {
                 <label className="select" value="" placeholder="Escolha seu plano:">
                   <select>
                     <option value="">Escolha seu plano:</option>
-                    <option value="PLANO 30MB">PLANO 30MB</option>
                     <option value="PLANO 100MB">PLANO 100MB</option>
                     <option value="PLANO 200MB">PLANO 200MB</option>
                     <option value="PLANO 300MB">PLANO 300MB</option>
