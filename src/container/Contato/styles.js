@@ -137,12 +137,10 @@ export const ContainerInfo = styled.div`
   ul {
     display: flex;
     flex-direction: column;
-    gap: 40px;
 
     li {
       display: flex;
       align-items: center;
-      gap: 7px;
 
       .div-1 {
         width: 72px;
@@ -159,6 +157,7 @@ export const ContainerInfo = styled.div`
 
         .div-2 {
           font-size: 28px;
+          margin-bottom: 60px;
         }
       }
 
@@ -178,11 +177,15 @@ export const ContainerInfo = styled.div`
             font-size: 20px;
           }
         }
+        .texto {
+          font-size: 20px;
+         
+        }
       }
     }
   }
 
   @media (max-width: 768px) {
-    margin-bottom: -150px;
+    margin-bottom: -100px;
   }
 `;

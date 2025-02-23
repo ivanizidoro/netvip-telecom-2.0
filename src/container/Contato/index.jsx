@@ -1,5 +1,10 @@
 import { useRef } from "react";
-import { FaPhoneAlt, FaEnvelope, FaMapMarkedAlt, FaWhatsapp } from "react-icons/fa";
+import {
+  FaPhoneAlt,
+  FaEnvelope,
+  FaMapMarkedAlt,
+  FaWhatsapp,
+} from "react-icons/fa";
 import { Footer } from "../../components/Footer";
 import { Header } from "../Header";
 import { Button, Container, ContainerInfo, Input, Textarea } from "./styles";
@@ -28,8 +33,9 @@ const info = [
   {
     icon: <FaMapMarkedAlt />,
     title: "Endereço",
-    description: "Avenida da bandeira - 291 Carpina-PE /",
-    descriptio1: "Rua Papa João XXII - 31 Lagoa de itaenga - PE",
+    description: "Avenida da bandeira - 291 Carpina-PE",
+    description1: "Rua Papa João XXII - 31 Lagoa de itaenga - PE",
+    description2: "Rua Sete de Setenbro - Tracunhaem - PE",
   },
 ];
 
@@ -127,7 +133,11 @@ export function Contato() {
                   />
                 </div>
                 {/* select */}
-                <label className="select" value="" placeholder="Escolha seu plano:">
+                <label
+                  className="select"
+                  value=""
+                  placeholder="Escolha seu plano:"
+                >
                   <select>
                     <option value="">Escolha seu plano:</option>
                     <option value="PLANO 100MB">PLANO 100MB</option>
@@ -145,9 +155,7 @@ export function Contato() {
                   required
                 />
                 {/* btn */}
-                <Button type="submit">
-                  Enviar
-                </Button>
+                <Button type="submit">Enviar</Button>
               </form>
             </div>
             {/* info */}
@@ -161,7 +169,13 @@ export function Contato() {
                       </div>
                       <div className="div-3">
                         <p>{item.title}</p>
-                        <h3>{`${item.description} ${item.descriptio1}`}</h3>
+                        <h3 className="texto">
+                          {item.description} <br />
+                          <br />
+                          {item.description1} <br />
+                          <br />
+                          {item.description2}
+                        </h3>
                       </div>
                     </li>
                   );
