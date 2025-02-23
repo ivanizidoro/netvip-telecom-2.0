@@ -1,9 +1,13 @@
 import styled from "styled-components";
 
-export const Container = styled.div``;
+export const Container = styled.div`
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+`;
 
 export const ContainerRedesSociais = styled.div`
-  height: 30px;
+  height: 40px;
 
   display: flex;
   align-items: center;
@@ -17,7 +21,9 @@ export const ContainerRedesSociais = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
+    gap: 5px;
+
+    font-size: 12px;
 
     text-decoration: none;
     cursor: pointer;

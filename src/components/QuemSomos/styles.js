@@ -4,6 +4,7 @@ export const Contianer = styled.div`
   max-width: 1200px;
   margin: 100px auto;
 
+
   @media (max-width: 768px) {
       margin: 20px 20px;
     }

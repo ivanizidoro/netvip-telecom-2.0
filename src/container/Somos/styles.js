@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   height: 100vh;
+  
 `;
 
 export const ContainerDiv = styled.div`
@@ -16,7 +17,7 @@ export const ContainerDiv = styled.div`
   align-items: center;
   justify-content: center;
 
-  gap: 100px;
+  gap: 50px;
 
   h1 {
     font-size: 100px;
@@ -26,6 +27,8 @@ export const ContainerDiv = styled.div`
 
     @media (max-width: 768px) {
       font-size: 40px;
+
+      padding-top: 200px;
     }
   }
 
@@ -47,8 +50,4 @@ export const ContainerDiv = styled.div`
       margin: 0 20px;
     }
   }
-
-  @media (max-width: 768px) {
-    
-    }
 `;

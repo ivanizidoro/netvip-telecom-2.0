@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -9,8 +8,9 @@ export const Container = styled.div`
 
   gap: 20px;
 
+  padding-top: 100px;
 
-  p{
+  p {
     color: rgb(69, 169, 250);
     font-size: 24px;
 
@@ -19,6 +19,10 @@ export const Container = styled.div`
       margin: 20px;
       text-align: center;
     }
+  }
+
+  @media (max-width: 768px) {
+    padding-top: 50px;
   }
 `;
 
@@ -30,9 +34,8 @@ export const H2 = styled.h2`
   margin-top: 80px;
 
   @media (max-width: 768px) {
-      font-size: 50px;
-    }
-
+    font-size: 50px;
+  }
 `;
 
 export const ContainerPlanos = styled.div`
@@ -42,7 +45,6 @@ export const ContainerPlanos = styled.div`
   justify-content: center;
 
   margin-top: 50px;
-
 
   div {
     display: flex;
@@ -75,7 +77,7 @@ export const ContainerPlanos = styled.div`
 
     background: rgb(69, 169, 250);
     color: #fff;
-    
+
     font-size: 23px;
     font-weight: 700;
 
@@ -88,7 +90,6 @@ export const ContainerPlanos = styled.div`
     &:active {
       opacity: 0.4;
     }
-
   }
 `;
 

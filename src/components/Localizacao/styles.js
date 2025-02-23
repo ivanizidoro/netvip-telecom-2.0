@@ -16,6 +16,8 @@ export const Container = styled.div`
     rgba(5, 26, 242, 0.7259278711484594) 99%
   );
 
+  padding-bottom: 20px;
+
   .localização {
     font-size: 60px;
     color: rgb(0, 6, 92);
@@ -34,7 +36,10 @@ export const Container = styled.div`
     font-weight: 900;
 
     color: #fff;
+  }
 
+  @media (max-width: 768px) {
+    padding-bottom: 20px;
   }
 `;
 
@@ -43,12 +48,13 @@ export const ContainerMap = styled.div`
   align-items: center;
   justify-content: center;
   text-align: center;
-  gap: 100px;
+  gap: 20px;
+  height: 100%;
 
   @media (max-width: 768px) {
-      display: flex;
-      flex-direction: column;
-    }
+    display: flex;
+    flex-direction: column;
+  }
 `;
 
 export const ContainerCarpina = styled.div`

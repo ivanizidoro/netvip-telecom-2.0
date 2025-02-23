@@ -11,6 +11,8 @@ export const Container = styled.div`
 
   @media (max-width: 768px) {
     height: 100%;
+
+    padding: 130px;
   }
 
   .container {
@@ -70,7 +72,6 @@ export const Container = styled.div`
 
         height: 400px;
         gap: 10px;
-
       }
     }
 
@@ -133,8 +134,6 @@ export const ContainerInfo = styled.div`
   order: 1;
   order: none;
 
-  margin-bottom: 32px;
-
   ul {
     display: flex;
     flex-direction: column;
@@ -181,5 +180,9 @@ export const ContainerInfo = styled.div`
         }
       }
     }
+  }
+
+  @media (max-width: 768px) {
+    margin-bottom: -150px;
   }
 `;
