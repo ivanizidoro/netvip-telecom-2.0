@@ -1,9 +1,11 @@
 import styled from "styled-components";
 
-
 export const Container = styled.div`
   height: 100vh;
-  
+
+  @media (max-width: 768px) {
+    margin-bottom: 80px;
+  }
 `;
 
 export const ContainerDiv = styled.div`
