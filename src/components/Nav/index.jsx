@@ -17,7 +17,9 @@ export function Nav() {
 
   return (
     <Container>
-      <Image src={Logo} alt="Logo" />
+      <Link to="/">
+        <Image src={Logo} alt="Logo" />
+      </Link>
       <MenuButton onClick={toggleMenu}>
         {isOpen ? <FiX size={30} /> : <FiMenu size={30} />}
       </MenuButton>

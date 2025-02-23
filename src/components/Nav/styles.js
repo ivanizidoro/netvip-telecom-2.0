@@ -28,6 +28,7 @@ export const Container = styled.div`
 
 export const Image = styled.img`
   width: 250px;
+  cursor: pointer;
 
   @media (max-width: 768px) {
     width: 150px;
@@ -113,7 +114,7 @@ export const Button = styled.button`
   a {
     color: rgb(31, 149, 247);
     text-decoration: none;
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 900;
   }
 
@@ -121,7 +122,7 @@ export const Button = styled.button`
     width: 150px;
 
     a {
-    font-size: 10px;
+    font-size: 9.7px;
   }
   }
 `;

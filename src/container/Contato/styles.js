@@ -35,7 +35,7 @@ export const Container = styled.div`
     order: none;
 
     @media (max-width: 768px) {
-      width: 110%;
+      width: 100%;
     }
   }
 
