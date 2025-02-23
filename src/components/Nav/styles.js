@@ -8,6 +8,9 @@ export const Container = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 15px 20px;
+  color: white;
+  position: relative;
 
   div {
     display: flex;
@@ -17,7 +20,6 @@ export const Container = styled.div`
     align-items: center;
   }
 
-  
   @media (max-width: 768px) {
     display: flex;
     justify-content: space-around;
@@ -32,7 +34,23 @@ export const Image = styled.img`
   }
 `;
 
+export const MenuButton = styled.button`
+  background: none;
+  border: none;
+  color: white;
+  font-size: 25px;
+  display: none;
+  cursor: pointer;
+
+  @media (max-width: 768px) {
+    display: block;
+  }
+`;
+
 export const NavContainer = styled.div`
+  display: flex;
+  gap: 20px;
+
   a {
     color: #fff;
     font-size: 18px;
@@ -41,6 +59,8 @@ export const NavContainer = styled.div`
     font-size: 22px;
     font-weight: 500;
 
+    padding: 10px;
+
     &:hover {
       color: rgb(69, 169, 250);
     }
@@ -48,28 +68,39 @@ export const NavContainer = styled.div`
     &:active {
       opacity: 0.4;
     }
+  }
 
-    @media (max-width: 768px) {
-      display: none;
-    }
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: ${({ isOpen }) => (isOpen ? "100vh" : "0")};
+    background: rgba(0, 30, 91, 0.8); /* Azul escuro com opacidade */
+    overflow: hidden;
+    transition: height 0.4s ease-in-out;
+    z-index: 1000;
   }
 `;
 
 export const Button = styled.button`
-  width: 150px;
+  width: 190px;
   height: 40px;
 
   background: rgb(249, 251, 252);
 
+  padding: 10px 20px;
+  border-radius: 5px;
   border: none;
-  border-radius: 10px;
 
-  margin-left: 30px;
-
-  cursor: pointer;
-
-  font-size: 15px;
-  font-weight: 700;
+  a {
+    color: white;
+    text-decoration: none;
+  }
 
   &:hover {
     opacity: 0.7;
@@ -80,12 +111,17 @@ export const Button = styled.button`
   }
 
   a {
-    color: rgb(69, 169, 250);
+    color: rgb(31, 149, 247);
     text-decoration: none;
+    font-size: 15px;
+    font-weight: 900;
   }
 
-  
   @media (max-width: 768px) {
     width: 150px;
+
+    a {
+    font-size: 10px;
+  }
   }
 `;

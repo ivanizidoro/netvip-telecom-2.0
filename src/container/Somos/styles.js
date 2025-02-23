@@ -22,7 +22,11 @@ export const ContainerDiv = styled.div`
     font-size: 100px;
     font-weight: 900;
 
-    color: rgb(10, 30, 240);
+    color: rgb(67, 81, 243);
+
+    @media (max-width: 768px) {
+      font-size: 40px;
+    }
   }
 
   p {
@@ -33,5 +37,18 @@ export const ContainerDiv = styled.div`
     text-indent: 60px;
 
     color: rgb(11, 144, 233);
+
+    @media (max-width: 768px) {
+      weight: 100px;
+      font-size: 15px;
+      justify-content: center;
+      text-align: justify;
+
+      margin: 0 20px;
+    }
   }
+
+  @media (max-width: 768px) {
+    
+    }
 `;

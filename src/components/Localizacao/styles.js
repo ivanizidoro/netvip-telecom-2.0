@@ -56,6 +56,11 @@ export const ContainerCarpina = styled.div`
     width: 500px;
     height: 300px;
 
+    @media (max-width: 1416px) {
+      width: 400px;
+      height: 300px;
+    }
+
     @media (max-width: 768px) {
       width: 370px;
     }
@@ -66,6 +71,27 @@ export const ContainerLagoa = styled.div`
   iframe {
     width: 500px;
     height: 300px;
+
+    @media (max-width: 1416px) {
+      width: 400px;
+      height: 300px;
+    }
+
+    @media (max-width: 768px) {
+      width: 370px;
+    }
+  }
+`;
+
+export const ContainerTracunhaem = styled.div`
+  iframe {
+    width: 500px;
+    height: 300px;
+
+    @media (max-width: 1416px) {
+      width: 400px;
+      height: 300px;
+    }
 
     @media (max-width: 768px) {
       width: 370px;
