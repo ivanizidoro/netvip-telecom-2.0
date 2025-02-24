@@ -47,6 +47,8 @@ export const ContainerPlanos = styled.div`
   justify-content: center;
 
   margin-top: 50px;
+  
+  heigth: 100vh;
 
   div {
     display: flex;
