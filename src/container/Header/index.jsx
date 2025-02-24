@@ -11,7 +11,7 @@ export function Header() {
           <BsInstagram />
           <p>@nnetvipprovedor</p>
         </a>
-        <a href="https://api.whatsapp.com/send?phone=55199400800" target="_blank">
+        <a href="https://api.whatsapp.com/send?phone=558199400800" target="_blank">
           <BsWhatsapp />
           <p>(81)99403-0800 / (81)99789-5571</p>
         </a>
