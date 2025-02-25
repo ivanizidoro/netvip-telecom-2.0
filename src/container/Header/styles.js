@@ -23,7 +23,7 @@ export const ContainerRedesSociais = styled.div`
     justify-content: center;
     gap: 5px;
 
-    font-size: 12px;
+    font-size: 17px;
 
     text-decoration: none;
     cursor: pointer;
@@ -41,11 +41,9 @@ export const ContainerRedesSociais = styled.div`
     text-align: center;
 
     @media (max-width: 768px) {
-      font-size: 6.7px;
-      font-weight: 600;
+      font-size: 9px;
+      font-weight: 400;
       gap: 3px;
-
-      margin: -5px;
     }
   }
 `;

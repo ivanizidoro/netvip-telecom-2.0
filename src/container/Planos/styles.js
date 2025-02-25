@@ -6,7 +6,7 @@ export const Container = styled.div`
   align-items: center;
   justify-content: center;
 
-  height: 100vh;
+  height: 100%;
 
   gap: 20px;
 
@@ -24,7 +24,7 @@ export const Container = styled.div`
   }
 
   @media (max-width: 768px) {
-    padding-top: 50px;
+    height: 100%;
   }
 `;
 
@@ -48,7 +48,6 @@ export const ContainerPlanos = styled.div`
 
   margin-top: 50px;
   
-  heigth: 100vh;
 
   div {
     display: flex;

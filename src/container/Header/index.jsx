@@ -1,7 +1,6 @@
 import { BsInstagram, BsTelephone, BsWhatsapp } from "react-icons/bs";
 import { Nav } from "../../components/Nav";
 import { Container, ContainerDiv, ContainerRedesSociais } from "./styles";
-import { FaEnvelope } from "react-icons/fa";
 
 export function Header() {
   return (
@@ -18,10 +17,6 @@ export function Header() {
         <a href="tel:8132997444" target="_blank">
           <BsTelephone />
           <p>(81) 3299-7444</p>
-        </a>
-        <a href="mailto:contato@netviptelecom.com.br" target="_blank"> 
-          <FaEnvelope />
-          <p>contato@netviptelecom.com.br</p>
         </a>
       </ContainerRedesSociais>
       <ContainerDiv>
