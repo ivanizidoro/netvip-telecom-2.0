@@ -51,6 +51,9 @@ export const ContainerMap = styled.div`
   gap: 20px;
   height: 100%;
 
+  max-width: 1200px;
+  margin: 0 auto;
+
   @media (max-width: 768px) {
     display: flex;
     flex-direction: column;
@@ -59,13 +62,8 @@ export const ContainerMap = styled.div`
 
 export const ContainerCarpina = styled.div`
   iframe {
-    width: 500px;
+    width: 470px;
     height: 300px;
-
-    @media (max-width: 1416px) {
-      width: 400px;
-      height: 300px;
-    }
 
     @media (max-width: 768px) {
       width: 370px;
@@ -75,13 +73,8 @@ export const ContainerCarpina = styled.div`
 
 export const ContainerLagoa = styled.div`
   iframe {
-    width: 500px;
+    width: 470px;
     height: 300px;
-
-    @media (max-width: 1416px) {
-      width: 400px;
-      height: 300px;
-    }
 
     @media (max-width: 768px) {
       width: 370px;
@@ -91,13 +84,8 @@ export const ContainerLagoa = styled.div`
 
 export const ContainerTracunhaem = styled.div`
   iframe {
-    width: 500px;
+    width: 470px;
     height: 300px;
-
-    @media (max-width: 1416px) {
-      width: 400px;
-      height: 300px;
-    }
 
     @media (max-width: 768px) {
       width: 370px;
