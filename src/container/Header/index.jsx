@@ -8,7 +8,7 @@ export function Header() {
       <ContainerRedesSociais>
         <a href="https://www.instagram.com/netvipprovedor" target="_blank">
           <BsInstagram />
-          <p>@nnetvipprovedor</p>
+          <p>@netvipprovedor</p>
         </a>
         <a href="https://api.whatsapp.com/send?phone=5581994030800" target="_blank">
           <BsWhatsapp />
