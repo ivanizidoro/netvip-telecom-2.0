@@ -1,4 +1,5 @@
 import { ContainerFooter, Contianer } from "./styles";
+import Politica from "../../assets/politica.png";
 
 export function Footer() {
   return (
@@ -9,6 +10,7 @@ export function Footer() {
           <br />
           CRIADO POR IVAN IZIDORO.
         </p>
+        <a src={Politica}>.</a>
       </ContainerFooter>
     </Contianer>
   );
