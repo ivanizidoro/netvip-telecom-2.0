@@ -7,7 +7,7 @@ export function Footer() {
         <p>
           © COPYRIGHT 2024 NETVIP TELECOM - TODOS OS DIREITOS RESERVADOS
           <br />
-          <a href="Política.pdf" target="_blank" rel="noopener noreferrer">
+          <a href="Politica.pdf" target="_blank" rel="noopener noreferrer">
             CRIADO POR IVAN IZIDORO.
           </a>
         </p>
