@@ -24,4 +24,8 @@ export const ContainerFooter = styled.div`
       font-size: 9px;
     }
   }
+
+  a{
+    color: #fff;
+  }
 `;
