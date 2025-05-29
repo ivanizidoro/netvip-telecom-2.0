@@ -3,6 +3,7 @@ import { Planos } from "../container/Planos";
 import App from "../App";
 import { Contato } from "../container/Contato";
 import { Somos } from "../container/Somos";
+import { Politica } from "../components/Politica";
 
 export const router = createBrowserRouter([
   {
@@ -34,6 +35,14 @@ export const router = createBrowserRouter([
     element: (
       <>
         <Somos />
+      </>
+    ),
+  },
+  {
+    path: "/politica",
+    element: (
+      <>
+        <Politica />
       </>
     ),
   },
