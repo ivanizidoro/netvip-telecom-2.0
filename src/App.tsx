@@ -1,4 +1,3 @@
-import React from "react";
 import { GlobalStyle } from "./styles/GlobalStyles";
 import Header from "./components/Header";
 import Hero from "./components/Hero";

@@ -223,7 +223,7 @@ const About: React.FC = () => {
           >
             <AboutImage>
               <AboutImg
-                src="https://images.pexels.com/photos/1181467/pexels-photo-1181467.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop"
+                src="/src/assets/FRENTE--LOJA.jpg"
                 alt="Equipe NETVIP TELECOM"
               />
             </AboutImage>
