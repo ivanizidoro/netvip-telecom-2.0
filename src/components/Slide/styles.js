@@ -1,10 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  padding-top: 100px;
-  margin: 0 auto;
-
-  max-width: 1200px;
+  width: 100%;
 `;
 
 export const ContianerSlide = styled.div`

@@ -5,7 +5,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCoverflow } from "swiper/modules";
 
 const data = [
-  { id: 1, image: "/dedicado.jpg" },
+  { id: 1, image: "/FRENTE--LOJA.jpg" },
 ];
 
 export function Slide() {
