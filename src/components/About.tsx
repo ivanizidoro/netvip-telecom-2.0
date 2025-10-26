@@ -9,7 +9,7 @@ const AboutContent = styled.div`
   grid-template-columns: 1fr 1fr;
   gap: 4rem;
   align-items: center;
-  margin-bottom: 4rem;
+  margin: 5rem 0;
 
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
@@ -131,17 +131,17 @@ const About: React.FC = () => {
   const stats = [
     {
       icon: <Users size={24} />,
-      number: "50K+",
+      number: "2K+",
       label: "Clientes Atendidos",
     },
     {
       icon: <MapPin size={24} />,
-      number: "200+",
+      number: "2+",
       label: "Cidades Cobertas",
     },
     {
       icon: <Award size={24} />,
-      number: "15",
+      number: "12",
       label: "Anos de Experiência",
     },
     {

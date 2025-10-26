@@ -4,7 +4,6 @@ import { motion, AnimatePresence } from "framer-motion";
 import {
   Menu,
   X,
-  Phone,
   MessageCircleDashed as MessageCircle,
 } from "lucide-react";
 import { Button } from "../styles/GlobalStyles";
@@ -98,7 +97,6 @@ const Nav = styled.nav`
 const Logo = styled.div`
   display: flex;
   align-items: center;
-  gap: 12px;
   font-size: 1.8rem;
   font-weight: 900;
   color: var(--primary-blue);
@@ -362,10 +360,21 @@ const Header: React.FC = () => {
               Contato
             </MobileNavLink>
 
-            <WhatsAppButton variant="secondary">
-              <MessageCircle size={16} />
-              WhatsApp
-            </WhatsAppButton>
+            <a
+              href="https://netvippe.sgp.net.br/accounts/central/login"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button
+                variant="outline"
+                style={{
+                  color: "var(--primary-blue)",
+                  borderColor: "var(--primary-blue)",
+                }}
+              >
+                Central de Cliente
+              </Button>
+            </a>
           </MobileMenu>
         )}
       </AnimatePresence>

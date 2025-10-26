@@ -1,9 +1,8 @@
-
-import React from 'react';
-import styled from 'styled-components';
-import { motion } from 'framer-motion';
-import {Wifi, Zap, Shield, ArrowRight, Play, Star} from 'lucide-react';
-import { Container, Button } from '../styles/GlobalStyles';
+import React from "react";
+import styled from "styled-components";
+import { motion } from "framer-motion";
+import { Wifi, Zap, Shield, ArrowRight, Play, Star } from "lucide-react";
+import { Container, Button } from "../styles/GlobalStyles";
 
 const HeroSection = styled.section`
   min-height: 100vh;
@@ -26,13 +25,24 @@ const HeroBackground = styled.div`
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: 
-    radial-gradient(circle at 20% 50%, rgba(255, 122, 0, 0.15) 0%, transparent 50%),
-    radial-gradient(circle at 80% 20%, rgba(255, 122, 0, 0.1) 0%, transparent 50%),
-    radial-gradient(circle at 40% 80%, rgba(255, 122, 0, 0.08) 0%, transparent 50%);
+  background-image: radial-gradient(
+      circle at 20% 50%,
+      rgba(255, 122, 0, 0.15) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 80% 20%,
+      rgba(255, 122, 0, 0.1) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 40% 80%,
+      rgba(255, 122, 0, 0.08) 0%,
+      transparent 50%
+    );
 
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
@@ -122,7 +132,7 @@ const PlayButton = styled(Button)`
   background: rgba(255, 255, 255, 0.1);
   border: 2px solid rgba(255, 255, 255, 0.3);
   backdrop-filter: blur(10px);
-  
+
   &:hover {
     background: rgba(255, 255, 255, 0.2);
     transform: translateY(-2px) scale(1.05);
@@ -216,26 +226,26 @@ const FloatingCard = styled(motion.div)`
   border-radius: 16px;
   box-shadow: var(--shadow-heavy);
   backdrop-filter: blur(10px);
-  
+
   &.speed-card {
     top: -30px;
     right: -50px;
     text-align: center;
-    
+
     @media (max-width: 768px) {
       top: -20px;
       right: -30px;
       padding: 1rem;
     }
   }
-  
+
   &.coverage-card {
     bottom: -30px;
     left: -50px;
     display: flex;
     align-items: center;
     gap: 0.8rem;
-    
+
     @media (max-width: 768px) {
       bottom: -20px;
       left: -30px;
@@ -259,16 +269,16 @@ const CardSubtitle = styled.div`
 
 const Hero: React.FC = () => {
   const scrollToPlans = () => {
-    const element = document.getElementById('plans');
+    const element = document.getElementById("plans");
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({ behavior: "smooth" });
     }
   };
 
   const scrollToContact = () => {
-    const element = document.getElementById('contact');
+    const element = document.getElementById("contact");
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({ behavior: "smooth" });
     }
   };
 
@@ -286,7 +296,7 @@ const Hero: React.FC = () => {
               <Star size={16} />
               #1 Provedor da Região
             </Badge>
-            
+
             <HeroTitle
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -296,17 +306,17 @@ const Hero: React.FC = () => {
               <br />
               de Alta Velocidade
             </HeroTitle>
-            
+
             <HeroSubtitle
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
             >
-              Conecte-se ao futuro com a NETVIP TELECOM. 
-              Velocidade ultrarrápida, estabilidade garantida e suporte 24h 
-              para você navegar sem limites.
+              Conecte-se ao futuro com a NETVIP TELECOM. Velocidade
+              ultrarrápida, estabilidade garantida e suporte 24h para você
+              navegar sem limites.
             </HeroSubtitle>
-            
+
             <HeroButtons
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -321,7 +331,7 @@ const Hero: React.FC = () => {
                 Fale Conosco
               </PlayButton>
             </HeroButtons>
-            
+
             <Features
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -341,7 +351,7 @@ const Hero: React.FC = () => {
               </Feature>
             </Features>
           </HeroText>
-          
+
           <HeroVisual
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -354,12 +364,19 @@ const Hero: React.FC = () => {
               <SpeedDisplay>600</SpeedDisplay>
               <SpeedLabel>MEGA</SpeedLabel>
               <PlanHighlight>Plano Premium</PlanHighlight>
-              <div style={{ color: 'var(--white)', opacity: 0.8, fontSize: '0.95rem' }}>
-                Velocidade de download e upload<br />
+              <div
+                style={{
+                  color: "var(--white)",
+                  opacity: 0.8,
+                  fontSize: "0.95rem",
+                }}
+              >
+                Velocidade de download e upload
+                <br />
                 Ideal para toda família
               </div>
             </MainCard>
-            
+
             <FloatingCard
               className="speed-card"
               initial={{ opacity: 0, y: -30 }}
@@ -370,7 +387,7 @@ const Hero: React.FC = () => {
               <CardTitle>99.9%</CardTitle>
               <CardSubtitle>Uptime</CardSubtitle>
             </FloatingCard>
-            
+
             <FloatingCard
               className="coverage-card"
               initial={{ opacity: 0, y: 30 }}
@@ -380,7 +397,7 @@ const Hero: React.FC = () => {
             >
               <Shield size={24} color="var(--primary-blue)" />
               <div>
-                <CardTitle style={{ fontSize: '1.2rem' }}>24/7</CardTitle>
+                <CardTitle style={{ fontSize: "1.2rem" }}>24/7</CardTitle>
                 <CardSubtitle>Suporte</CardSubtitle>
               </div>
             </FloatingCard>

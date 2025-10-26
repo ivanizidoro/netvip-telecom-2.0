@@ -319,7 +319,7 @@ const Plans: React.FC = () => {
       icon: <Star size={24} />,
       features: [
         "Velocidade de 400 Mbps",
-        "Wi-Fi 6 mesh grátis",
+        "Wi-Fi 6 grátis",
         "Instalação gratuita",
         "Suporte técnico 24h",
         "Aplicativos de filmes e séries grátis",
@@ -334,7 +334,7 @@ const Plans: React.FC = () => {
       icon: <Star size={24} />,
       features: [
         "Velocidade de 600 Mbps",
-        "Wi-Fi 6 mesh premium",
+        "Wi-Fi 6 premium",
         "Instalação gratuita",
         "Suporte técnico 24h",
         "Aplicativos de filmes e séries grátis",

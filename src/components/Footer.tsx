@@ -75,7 +75,6 @@ const FooterColumn = styled(motion.div)`
 const Logo = styled.div`
   display: flex;
   align-items: center;
-  gap: 12px;
   font-size: 2rem;
   font-weight: 900;
   margin-bottom: 1rem;
@@ -360,13 +359,13 @@ const Footer: React.FC = () => {
                   <ContactItem>
                     <Phone size={18} />
                     <div>
-                      <div>(81) 99403-0600</div>
+                      <div>(81) 99403-0800</div>
                       <div>(81) 3499-7444</div>
                     </div>
                   </ContactItem>
                   <ContactItem>
                     <Mail size={18} />
-                    <span>contato@netviptelecom.com</span>
+                    <span>contato@netviptelecom.com.br</span>
                   </ContactItem>
                   <ContactItem>
                     <MapPin size={18} />
