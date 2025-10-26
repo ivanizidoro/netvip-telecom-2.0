@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 import { Users, Award, Zap, Shield, MapPin, Clock } from "lucide-react";
 import { Container, Section, Title, Subtitle } from "../styles/GlobalStyles";
+import loja from "../assets/FRENTE--LOJA.jpg";
 
 const AboutContent = styled.div`
   display: grid;
@@ -223,7 +224,7 @@ const About: React.FC = () => {
           >
             <AboutImage>
               <AboutImg
-                src="/src/assets/FRENTE--LOJA.jpg"
+                src={loja}
                 alt="Equipe NETVIP TELECOM"
               />
             </AboutImage>
