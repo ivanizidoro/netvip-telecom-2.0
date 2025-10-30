@@ -142,7 +142,7 @@ const About: React.FC = () => {
     },
     {
       icon: <Award size={24} />,
-      number: "12",
+      number: "16",
       label: "Anos de Experiência",
     },
     {
@@ -184,7 +184,7 @@ const About: React.FC = () => {
         >
           <Title>Sobre a NETVIP TELECOM</Title>
           <Subtitle>
-            Há mais de 12 anos conectando pessoas e empresas com tecnologia de
+            Há mais de 16 anos conectando pessoas e empresas com tecnologia de
             ponta
           </Subtitle>
         </motion.div>

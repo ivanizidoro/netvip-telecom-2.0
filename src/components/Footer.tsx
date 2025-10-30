@@ -388,8 +388,16 @@ const Footer: React.FC = () => {
 
             <FooterBottom>
               <Copyright>
-                © 2024 NETVIP TELECOM - Todos os direitos reservados. Criado por{" "}
-                <strong>IVAN IZIDORO</strong>
+                © 2025 NETVIP TELECOM - Todos os direitos reservados. Criado por{" "}
+                <strong>
+                  <a
+                    href="https://www.linkedin.com/in/ivan-izidoro"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    IVAN IZIDORO
+                  </a>
+                </strong>
               </Copyright>
               <BackToTop onClick={scrollToTop} aria-label="Voltar ao topo">
                 <ArrowUp size={20} />

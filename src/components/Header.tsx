@@ -1,11 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { motion, AnimatePresence } from "framer-motion";
-import {
-  Menu,
-  X,
-  MessageCircleDashed as MessageCircle,
-} from "lucide-react";
+import { Menu, X, MessageCircleDashed as MessageCircle } from "lucide-react";
 import { Button } from "../styles/GlobalStyles";
 
 const TopBar = styled.div`
@@ -64,7 +60,7 @@ const TopBarContent = styled.div`
 
 const HeaderContainer = styled(motion.header)<{ scrolled: boolean }>`
   position: fixed;
-  top: ${(props) => (props.scrolled ? "0" : "40px")};
+  top: ${(props) => (props.scrolled ? "0" : "35px")};
   left: 0;
   right: 0;
   z-index: 1000;
@@ -90,7 +86,7 @@ const Nav = styled.nav`
   margin: 0 auto;
 
   @media (max-width: 768px) {
-    padding: 1rem;
+    padding: 0 1rem;
   }
 `;
 
