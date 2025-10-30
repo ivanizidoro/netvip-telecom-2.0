@@ -97,6 +97,7 @@ const Logo = styled.div`
   font-weight: 900;
   color: var(--primary-blue);
   cursor: pointer;
+  flex-direction: column;
   transition: transform 0.3s ease;
 
   &:hover {
@@ -116,6 +117,18 @@ const LogoText = styled.span`
 const LogoOrange = styled.span`
   color: var(--primary-orange);
   font-weight: 900;
+`;
+
+const LogoText1 = styled.text`
+  background: var(--gradient-primary);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 900;
+  letter-spacing: -0.5px;
+  margin-left: 3.4rem;
+  font-size: 0.6rem;
+  margin-top: -0.8rem;
 `;
 
 const NavLinks = styled.div`
@@ -284,8 +297,11 @@ const Header: React.FC = () => {
       >
         <Nav>
           <Logo onClick={() => scrollToSection("home")}>
-            <LogoText>NET</LogoText>
-            <LogoOrange>VIP</LogoOrange>
+            <div>
+              <LogoText>NET</LogoText>
+              <LogoOrange>VIP</LogoOrange>
+            </div>
+            <LogoText1>TELECOM</LogoText1>
           </Logo>
 
           <NavLinks>
