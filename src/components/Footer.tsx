@@ -229,7 +229,7 @@ const WhatsAppFloat = styled.div`
 
   @media (max-width: 768px) {
     bottom: 1rem;
-    right: 1rem;
+    right: 1.3rem;
   }
 `;
 
