@@ -84,6 +84,7 @@ export const Title = styled.h2`
   color: var(--primary-blue);
   text-align: center;
   margin-bottom: 1rem;
+  margin-top: 2rem;
 
   @media (max-width: 768px) {
     font-size: 2rem;
