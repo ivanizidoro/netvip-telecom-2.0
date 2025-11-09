@@ -284,8 +284,7 @@ const Header: React.FC = () => {
               Instagram
             </a>
           </span>
-          <span>📞 (81) 99403-0800 / (81) 99789-5571</span>
-          <span>🎯 Central de Cliente: (81) 3499-7444</span>
+          <span>📞 (81) 99403-0800 / (81) 99789-5571 / (81) 3499-7444</span>
         </TopBarContent>
       </TopBar>
 

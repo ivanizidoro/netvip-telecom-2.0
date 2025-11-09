@@ -406,7 +406,7 @@ const Footer: React.FC = () => {
                 © 2025 NETVIP TELECOM - Todos os direitos reservados. Criado por{" "}
                 <strong>
                   <a
-                    href="https://www.linkedin.com/in/ivan-izidoro"
+                    href="https://www.ivanizidoro.com.br"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
