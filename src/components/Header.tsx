@@ -309,7 +309,10 @@ const Header: React.FC = () => {
               Quem Somos
             </NavLink>
             <NavLink onClick={() => scrollToSection("plans")}>
-              Nossos Planos
+              Planos Fibra
+            </NavLink>
+            <NavLink onClick={() => scrollToSection("mobile-plans")}>
+              Planos Móveis
             </NavLink>
             <NavLink onClick={() => scrollToSection("contact")}>
               Contato
