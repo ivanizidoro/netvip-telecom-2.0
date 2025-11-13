@@ -370,9 +370,9 @@ const Header: React.FC = () => {
             <MobileNavLink onClick={() => scrollToSection("plans")}>
               Planos Fibra
             </MobileNavLink>
-            <NavLink onClick={() => scrollToSection("mobile-plans")}>
+            <MobileNavLink onClick={() => scrollToSection("mobile-plans")}>
               Planos Móveis
-            </NavLink>
+            </MobileNavLink>
             <MobileNavLink onClick={() => scrollToSection("contact")}>
               Contato
             </MobileNavLink>
