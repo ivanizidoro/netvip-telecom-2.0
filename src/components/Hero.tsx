@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 import { Wifi, Zap, Shield, ArrowRight, Play, Star } from "lucide-react";
@@ -267,19 +268,16 @@ const CardSubtitle = styled.div`
   font-weight: 500;
 `;
 
+
 const Hero: React.FC = () => {
-  const scrollToPlans = () => {
-    const element = document.getElementById("plans");
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
+  const navigate = useNavigate();
+
+  const goToPlans = () => {
+    navigate("/planos");
   };
 
-  const scrollToContact = () => {
-    const element = document.getElementById("contact");
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
+  const goToContact = () => {
+    navigate("/contato");
   };
 
   return (
@@ -322,11 +320,11 @@ const Hero: React.FC = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
             >
-              <Button variant="secondary" onClick={scrollToPlans}>
+              <Button variant="secondary" onClick={goToPlans}>
                 Ver Nossos Planos
                 <ArrowRight size={18} />
               </Button>
-              <PlayButton variant="outline" onClick={scrollToContact}>
+              <PlayButton variant="outline" onClick={goToContact}>
                 <Play size={16} />
                 Fale Conosco
               </PlayButton>
