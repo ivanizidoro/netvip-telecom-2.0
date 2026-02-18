@@ -1,7 +1,13 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, MessageCircleDashed as MessageCircle } from "lucide-react";
+import {
+  Menu,
+  X,
+  MessageCircleDashed as MessageCircle,
+  Instagram,
+} from "lucide-react";
 import { Button } from "../styles/GlobalStyles";
 
 const TopBar = styled.div`
@@ -45,35 +51,55 @@ const TopBarContent = styled.div`
   margin: 0 auto;
   padding: 0 2rem;
   display: flex;
-  gap: 2rem;
-  align-items: center;
-  position: relative;
   justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  position: relative;
   z-index: 2;
 
   @media (max-width: 768px) {
+    max-width: 100%;
+    width: 100%;
     flex-direction: column;
     gap: 0.3rem;
-    padding: 0 1rem;
+    padding: 0 0.5rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
   }
 `;
 
-const HeaderContainer = styled(motion.header)<{ scrolled: boolean }>`
+const ContactInfo = styled.div`
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+
+  @media (max-width: 768px) {
+    gap: 1rem;
+    font-size: 0.8rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+`;
+
+const HeaderContainer = styled(motion.header)<{ $scrolled: boolean }>`
   position: fixed;
-  top: ${(props) => (props.scrolled ? "0" : "35px")};
+  top: ${(props) => (props.$scrolled ? "0" : "40px")};
   left: 0;
   right: 0;
   z-index: 1000;
   background: ${(props) =>
-    props.scrolled ? "var(--white)" : "rgba(255, 255, 255, 0.95)"};
+    props.$scrolled ? "var(--white)" : "rgba(255, 255, 255, 0.95)"};
   backdrop-filter: blur(15px);
   border-bottom: ${(props) =>
-    props.scrolled ? "1px solid rgba(10, 29, 99, 0.1)" : "none"};
-  box-shadow: ${(props) => (props.scrolled ? "var(--shadow-medium)" : "none")};
+    props.$scrolled ? "1px solid rgba(10, 29, 99, 0.1)" : "none"};
+  box-shadow: ${(props) => (props.$scrolled ? "var(--shadow-medium)" : "none")};
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 
   @media (max-width: 768px) {
-    top: ${(props) => (props.scrolled ? "0" : "80px")};
+    top: ${(props) => (props.$scrolled ? "0" : "80px")};
   }
 `;
 
@@ -86,18 +112,18 @@ const Nav = styled.nav`
   margin: 0 auto;
 
   @media (max-width: 768px) {
-    padding: 0 1rem;
+    padding: 1rem;
   }
 `;
 
 const Logo = styled.div`
   display: flex;
   align-items: center;
+  gap: 12px;
   font-size: 1.8rem;
   font-weight: 900;
   color: var(--primary-blue);
   cursor: pointer;
-  flex-direction: column;
   transition: transform 0.3s ease;
 
   &:hover {
@@ -119,18 +145,6 @@ const LogoOrange = styled.span`
   font-weight: 900;
 `;
 
-const LogoText1 = styled.text`
-  background: var(--gradient-primary);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-weight: 900;
-  letter-spacing: -0.5px;
-  margin-left: 3.4rem;
-  font-size: 0.6rem;
-  margin-top: -0.8rem;
-`;
-
 const NavLinks = styled.div`
   display: flex;
   gap: 2.5rem;
@@ -141,7 +155,7 @@ const NavLinks = styled.div`
   }
 `;
 
-const NavLink = styled.a`
+const RouterNavLink = styled(Link)`
   color: var(--primary-blue);
   font-weight: 500;
   font-size: 0.95rem;
@@ -225,7 +239,7 @@ const MobileMenu = styled(motion.div)`
   gap: 2.5rem;
 `;
 
-const MobileNavLink = styled.a`
+const MobileRouterLink = styled(Link)`
   font-size: 1.8rem;
   font-weight: 600;
   color: var(--primary-blue);
@@ -257,6 +271,7 @@ const CloseButton = styled.button`
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -268,9 +283,19 @@ const Header: React.FC = () => {
   }, []);
 
   const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+    if (window.location.pathname !== "/") {
+      navigate("/");
+      setTimeout(() => {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 100);
+    } else {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
     }
     setIsMenuOpen(false);
   };
@@ -279,68 +304,65 @@ const Header: React.FC = () => {
     <>
       <TopBar>
         <TopBarContent>
-          <span>
-            <a href="https://www.instagram.com/netvipprovedor/#" target="#">
-              Instagram
-            </a>
-          </span>
-          <span>📞 (81) 99403-0800 / (81) 99789-5571 / (81) 3499-7444</span>
+          <ContactInfo>
+            <span>
+              <a
+                href="https://www.instagram.com/netvipprovedor/"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  display: "inline-flex",
+                  alignItems: "center",
+                  gap: "0.3em",
+                  color: "inherit",
+                  textDecoration: "none",
+                }}
+              >
+                <Instagram size={16} style={{ verticalAlign: "middle" }} />
+                @netvipprovedor
+              </a>
+            </span>
+            <span>📞 (81) 99403-0800 / (81) 99789-5571 / (81) 3499-7444</span>
+          </ContactInfo>
         </TopBarContent>
       </TopBar>
 
       <HeaderContainer
-        scrolled={scrolled}
+        $scrolled={scrolled}
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
       >
         <Nav>
           <Logo onClick={() => scrollToSection("home")}>
-            <div>
-              <LogoText>NET</LogoText>
-              <LogoOrange>VIP</LogoOrange>
-            </div>
-            <LogoText1>TELECOM</LogoText1>
+            <LogoText>NET</LogoText>
+            <LogoOrange>VIP</LogoOrange>
           </Logo>
 
           <NavLinks>
-            <NavLink onClick={() => scrollToSection("home")}>Início</NavLink>
-            <NavLink onClick={() => scrollToSection("about")}>
-              Quem Somos
-            </NavLink>
-            <NavLink onClick={() => scrollToSection("plans")}>
-              Planos Fibra
-            </NavLink>
-            <NavLink onClick={() => scrollToSection("mobile-plans")}>
-              Planos Móveis
-            </NavLink>
-            <NavLink onClick={() => scrollToSection("contact")}>
-              Contato
-            </NavLink>
+            <RouterNavLink to="/">Início</RouterNavLink>
+            <RouterNavLink to="/quem-somos">Quem Somos</RouterNavLink>
+            <RouterNavLink to="/planos">Nossos Planos</RouterNavLink>
+            <RouterNavLink to="/trabalhe-conosco">
+              Trabalhe Conosco
+            </RouterNavLink>
+            <RouterNavLink to="/contato">Contato</RouterNavLink>
           </NavLinks>
 
           <ActionButtons>
-            <a href="http://api.whatsapp.com/send/?phone=5581994030800&text=Ol%C3%A1%21+Gostaria+de+conhecer+os+planos+da+NETVIP+TELECOM.&type=phone_number&app_absent=0">
-              <WhatsAppButton variant="secondary">
-                <MessageCircle size={16} />
-                WhatsApp
-              </WhatsAppButton>
-            </a>
-            <a
-              href="https://netvippe.sgp.net.br/accounts/central/login"
-              target="_blank"
-              rel="noopener noreferrer"
+            <WhatsAppButton variant="secondary">
+              <MessageCircle size={16} />
+              WhatsApp
+            </WhatsAppButton>
+            <Button
+              variant="outline"
+              style={{
+                color: "var(--primary-blue)",
+                borderColor: "var(--primary-blue)",
+              }}
             >
-              <Button
-                variant="outline"
-                style={{
-                  color: "var(--primary-blue)",
-                  borderColor: "var(--primary-blue)",
-                }}
-              >
-                Central de Cliente
-              </Button>
-            </a>
+              Central de Cliente
+            </Button>
           </ActionButtons>
 
           <MobileMenuButton onClick={() => setIsMenuOpen(true)}>
@@ -361,37 +383,35 @@ const Header: React.FC = () => {
               <X size={24} />
             </CloseButton>
 
-            <MobileNavLink onClick={() => scrollToSection("home")}>
+            <MobileRouterLink to="/" onClick={() => setIsMenuOpen(false)}>
               Início
-            </MobileNavLink>
-            <MobileNavLink onClick={() => scrollToSection("about")}>
-              Quem Somos
-            </MobileNavLink>
-            <MobileNavLink onClick={() => scrollToSection("plans")}>
-              Planos Fibra
-            </MobileNavLink>
-            <MobileNavLink onClick={() => scrollToSection("mobile-plans")}>
-              Planos Móveis
-            </MobileNavLink>
-            <MobileNavLink onClick={() => scrollToSection("contact")}>
-              Contato
-            </MobileNavLink>
-
-            <a
-              href="https://netvippe.sgp.net.br/accounts/central/login"
-              target="_blank"
-              rel="noopener noreferrer"
+            </MobileRouterLink>
+            <MobileRouterLink
+              to="/quem-somos"
+              onClick={() => setIsMenuOpen(false)}
             >
-              <Button
-                variant="outline"
-                style={{
-                  color: "var(--primary-blue)",
-                  borderColor: "var(--primary-blue)",
-                }}
-              >
-                Central de Cliente
-              </Button>
-            </a>
+              Quem Somos
+            </MobileRouterLink>
+            <MobileRouterLink to="/planos" onClick={() => setIsMenuOpen(false)}>
+              Nossos Planos
+            </MobileRouterLink>
+            <MobileRouterLink
+              to="/trabalhe-conosco"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Trabalhe Conosco
+            </MobileRouterLink>
+            <MobileRouterLink
+              to="/contato"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Contato
+            </MobileRouterLink>
+
+            <WhatsAppButton variant="secondary">
+              <MessageCircle size={16} />
+              WhatsApp
+            </WhatsAppButton>
           </MobileMenu>
         )}
       </AnimatePresence>

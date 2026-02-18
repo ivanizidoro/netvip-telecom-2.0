@@ -1,16 +1,14 @@
-import React from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 import { Users, Award, Zap, Shield, MapPin, Clock } from "lucide-react";
 import { Container, Section, Title, Subtitle } from "../styles/GlobalStyles";
-import loja from "../assets/FRENTE--LOJA.jpg";
 
 const AboutContent = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 4rem;
   align-items: center;
-  margin: 5rem 0;
+  margin-bottom: 4rem;
 
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
@@ -132,17 +130,17 @@ const About: React.FC = () => {
   const stats = [
     {
       icon: <Users size={24} />,
-      number: "2K+",
+      number: "50K+",
       label: "Clientes Atendidos",
     },
     {
       icon: <MapPin size={24} />,
-      number: "2+",
+      number: "200+",
       label: "Cidades Cobertas",
     },
     {
       icon: <Award size={24} />,
-      number: "16",
+      number: "15",
       label: "Anos de Experiência",
     },
     {
@@ -184,7 +182,7 @@ const About: React.FC = () => {
         >
           <Title>Sobre a NETVIP TELECOM</Title>
           <Subtitle>
-            Há mais de 16 anos conectando pessoas e empresas com tecnologia de
+            Há mais de 15 anos conectando pessoas e empresas com tecnologia de
             ponta
           </Subtitle>
         </motion.div>
@@ -224,7 +222,7 @@ const About: React.FC = () => {
           >
             <AboutImage>
               <AboutImg
-                src={loja}
+                src="https://images.pexels.com/photos/1181467/pexels-photo-1181467.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop"
                 alt="Equipe NETVIP TELECOM"
               />
             </AboutImage>

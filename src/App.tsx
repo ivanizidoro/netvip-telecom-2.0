@@ -1,13 +1,14 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { GlobalStyle } from "./styles/GlobalStyles";
 import Header from "./components/Header";
-import Hero from "./components/Hero";
-import Plans from "./components/Plans";
-import MobilePlans from "./components/MobilePlans";
 import WelcomePopup from "./components/WelcomePopup";
-import About from "./components/About";
-import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import Home from "./pages/Home";
+import AboutPage from "./pages/AboutPage";
+import PlansPage from "./pages/PlansPage";
+import ContactPage from "./pages/ContactPage";
+import CareersPage from "./pages/CareersPage";
 
 function App() {
   const [isWelcomePopupOpen, setIsWelcomePopupOpen] = useState(false);
@@ -22,20 +23,22 @@ function App() {
   }, []);
 
   return (
-    <>
+    <Router>
       <GlobalStyle />
       <WelcomePopup
         isOpen={isWelcomePopupOpen}
         onClose={() => setIsWelcomePopupOpen(false)}
       />
       <Header />
-      <Hero />
-      <Plans />
-      <MobilePlans />
-      <About />
-      <Contact />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/quem-somos" element={<AboutPage />} />
+        <Route path="/planos" element={<PlansPage />} />
+        <Route path="/contato" element={<ContactPage />} />
+        <Route path="/trabalhe-conosco" element={<CareersPage />} />
+      </Routes>
       <Footer />
-    </>
+    </Router>
   );
 }
 
