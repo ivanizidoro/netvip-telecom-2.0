@@ -119,7 +119,7 @@ const Nav = styled.nav`
 const Logo = styled.div`
   display: flex;
   align-items: center;
-  gap: 12px;
+
   font-size: 1.8rem;
   font-weight: 900;
   color: var(--primary-blue);
