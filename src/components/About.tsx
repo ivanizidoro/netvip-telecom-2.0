@@ -130,12 +130,12 @@ const About: React.FC = () => {
   const stats = [
     {
       icon: <Users size={24} />,
-      number: "50K+",
+      number: "3K+",
       label: "Clientes Atendidos",
     },
     {
       icon: <MapPin size={24} />,
-      number: "200+",
+      number: "3+",
       label: "Cidades Cobertas",
     },
     {
