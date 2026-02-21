@@ -341,6 +341,21 @@ const Plans: React.FC = () => {
         "Sem fidelidade",
       ],
     },
+    {
+      name: "ULTRA MAX",
+      speed: "1000",
+      price: "160,00",
+      color: "linear-gradient(135deg, #0A1D63 0%, #FF7A00 100%)",
+      icon: <Star size={24} />,
+      features: [
+        "Velocidade de 1000 Mbps",
+        "Wi-Fi 6 premium",
+        "Instalação gratuita",
+        "Suporte técnico 24h",
+        "Aplicativos de filmes e séries grátis",
+        "Sem fidelidade",
+      ],
+    },
   ];
 
   const scrollToContact = () => {

@@ -359,7 +359,7 @@ const Hero: React.FC = () => {
               whileHover={{ scale: 1.02, rotateY: 5 }}
               transition={{ duration: 0.3 }}
             >
-              <SpeedDisplay>600</SpeedDisplay>
+              <SpeedDisplay>1000</SpeedDisplay>
               <SpeedLabel>MEGA</SpeedLabel>
               <PlanHighlight>Plano Premium</PlanHighlight>
               <div

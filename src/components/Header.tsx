@@ -110,6 +110,7 @@ const Nav = styled.nav`
   padding: 1rem 2rem;
   max-width: 1200px;
   margin: 0 auto;
+  
 
   @media (max-width: 768px) {
     padding: 1rem;
@@ -163,7 +164,7 @@ const LogoOrange = styled.span`
 
 const NavLinks = styled.div`
   display: flex;
-  gap: 2.5rem;
+  gap: 1.5rem;
   align-items: center;
 
   @media (max-width: 768px) {
