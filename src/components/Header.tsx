@@ -110,7 +110,6 @@ const Nav = styled.nav`
   padding: 1rem 2rem;
   max-width: 1200px;
   margin: 0 auto;
-  
 
   @media (max-width: 768px) {
     padding: 1rem;
@@ -372,7 +371,13 @@ const Header: React.FC = () => {
           <ActionButtons>
             <WhatsAppButton variant="secondary">
               <MessageCircle size={16} />
-              WhatsApp
+              <a
+                href="https://wa.me/5581994030800"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                WhatsApp
+              </a>
             </WhatsAppButton>
             <Button
               variant="outline"
@@ -381,7 +386,13 @@ const Header: React.FC = () => {
                 borderColor: "var(--primary-blue)",
               }}
             >
-              Central de Cliente
+              <a
+                href="https://netvippe.sgp.net.br/accounts/central/login"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Central de Cliente
+              </a>
             </Button>
           </ActionButtons>
 
