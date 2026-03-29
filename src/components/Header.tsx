@@ -446,6 +446,9 @@ const Header: React.FC = () => {
           </MobileMenu>
         )}
       </AnimatePresence>
+      <a href="/politica" target="_blank" rel="noopener noreferrer">
+        Política de Uso
+      </a>
     </>
   );
 };
