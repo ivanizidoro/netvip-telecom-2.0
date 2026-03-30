@@ -3,27 +3,25 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import { ChevronLeft } from "lucide-react";
-import { Container } from "../styles/GlobalStyles";
 
-const PolicyWrapper = styled.div`
-  background: var(--gradient-primary);
+const PageContainer = styled.div`
+  background: var(--gradient-primary); /* Usa o gradiente do seu site */
   min-height: 100vh;
   color: var(--white);
-  padding: 4rem 0;
+  padding: 4rem 2rem;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: center;
 `;
 
 const ContentCard = styled(motion.div)`
   background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(12px);
+  backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 24px;
+  border-radius: 20px;
   padding: 3rem;
+  max-width: 800px;
   width: 100%;
-  max-width: 850px;
-  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
 
   @media (max-width: 768px) {
     padding: 1.5rem;
@@ -36,28 +34,32 @@ const BackButton = styled.button`
   color: var(--primary-orange);
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 8px;
   cursor: pointer;
-  font-weight: 700;
+  font-weight: bold;
   margin-bottom: 2rem;
-  align-self: flex-start;
-  transition: transform 0.2s;
+  transition: opacity 0.2s;
   &:hover {
-    transform: translateX(-5px);
+    opacity: 0.8;
   }
 `;
 
 const Section = styled.section`
   margin-bottom: 2rem;
-  h3 {
+  h2 {
     color: var(--primary-orange);
-    font-size: 1.3rem;
-    margin-bottom: 0.8rem;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
   }
   p {
-    line-height: 1.7;
-    opacity: 0.85;
-    font-size: 1rem;
+    line-height: 1.8;
+    opacity: 0.9;
+    margin-bottom: 0.5rem;
+  }
+  ul {
+    margin-left: 1.5rem;
+    opacity: 0.9;
+    line-height: 1.8;
   }
 `;
 
@@ -65,69 +67,101 @@ const Politica: React.FC = () => {
   const navigate = useNavigate();
   useEffect(() => window.scrollTo(0, 0), []);
 
-  const data = [
-    {
-      t: "1. Aceitação",
-      c: "Ao utilizar os serviços NETVIP, o cliente concorda com os termos e normas da ANATEL.",
-    },
-    {
-      t: "2. Uso Ético",
-      c: "A internet deve ser usada de forma legal. Atividades ilícitas como hacking e fraude são proibidas.",
-    },
-    {
-      t: "3. Estabilidade",
-      c: "Tráfego abusivo que comprometa a rede poderá gerar limitação ou suspensão do serviço.",
-    },
-    {
-      t: "4. Cancelamento",
-      c: "O serviço pode ser encerrado em caso de violação contratual ou legal.",
-    },
-    {
-      t: "5. Privacidade",
-      c: "Dados são tratados conforme a LGPD para garantir sua segurança e funcionamento do serviço.",
-    },
-    {
-      t: "6. Terceiros",
-      c: "O acesso a serviços externos (Google, etc.) é livre dentro do uso normal da conexão.",
-    },
-  ];
-
   return (
-    <PolicyWrapper>
-      <Container>
+    <PageContainer>
+      <ContentCard
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+      >
         <BackButton onClick={() => navigate("/")}>
-          <ChevronLeft size={20} /> Voltar
+          <ChevronLeft size={20} /> Voltar ao Site
         </BackButton>
 
-        <ContentCard
-          initial={{ opacity: 0, scale: 0.95 }}
-          animate={{ opacity: 1, scale: 1 }}
+        <h1 style={{ marginBottom: "2.5rem" }}>
+          Política de Uso <span>NETVIP</span>
+        </h1>
+
+        <Section>
+          <h2>Aceitação dos Termos</h2>
+          <p>
+            Ao contratar e utilizar os serviços da NETVIP TELECOM, o cliente
+            concorda com os termos estabelecidos pelo provedor e com as leis
+            aplicáveis, incluindo regulamentações da ANATEL.
+          </p>
+        </Section>
+
+        <Section>
+          <h2>Uso Responsável dos Serviços</h2>
+          <p>O cliente deve utilizar a internet de maneira legal e ética.</p>
+          <ul>
+            <li>
+              É proibido o uso dos serviços para atividades ilícitas, como
+              fraude, hacking ou disseminação de conteúdo ilegal.
+            </li>
+          </ul>
+        </Section>
+
+        <Section>
+          <h2>Restrições de Uso</h2>
+          <p>
+            Uso que gere tráfego abusivo, interferência na rede ou comprometa a
+            estabilidade dos serviços poderá ser limitado, suspenso ou
+            cancelado.
+          </p>
+        </Section>
+
+        <Section>
+          <h2>Suspensão ou Cancelamento</h2>
+          <p>
+            O provedor poderá suspender, limitar ou encerrar os serviços em
+            casos de violação dos termos ou da legislação vigente.
+          </p>
+        </Section>
+
+        <Section>
+          <h2>Privacidade e Dados</h2>
+          <p>
+            A política de privacidade da NETVIP TELECOM informa como os dados
+            dos clientes são coletados, armazenados e utilizados, em
+            conformidade com a LGPD.
+          </p>
+        </Section>
+
+        <Section>
+          <h2>Uso de Serviços de Terceiros</h2>
+          <p>
+            É permitido o acesso e uso de serviços de terceiros, como Google,
+            dentro do uso normal da conexão.
+          </p>
+          <p>
+            Dados de uso podem ser compartilhados de acordo com a política de
+            privacidade, quando necessário para funcionamento ou métricas de
+            serviços.
+          </p>
+        </Section>
+
+        <Section>
+          <h2>Consulta e Contratos</h2>
+          <p>
+            Os termos completos, restrições e direitos do cliente estão
+            detalhados no contrato assinado no momento da contratação.
+          </p>
+        </Section>
+
+        <footer
+          style={{
+            marginTop: "3rem",
+            opacity: 0.5,
+            fontSize: "0.8rem",
+            textAlign: "center",
+            borderTop: "1px solid rgba(255,255,255,0.1)",
+            paddingTop: "1rem",
+          }}
         >
-          <h1 style={{ marginBottom: "2rem" }}>
-            Política de Uso <span>NETVIP</span>
-          </h1>
-
-          {data.map((item, i) => (
-            <Section key={i}>
-              <h3>{item.t}</h3>
-              <p>{item.c}</p>
-            </Section>
-          ))}
-
-          <footer
-            style={{
-              marginTop: "2rem",
-              paddingTop: "2rem",
-              borderTop: "1px solid rgba(255,255,255,0.1)",
-              fontSize: "0.85rem",
-              opacity: 0.6,
-            }}
-          >
-            * Consulte o contrato de adesão para detalhes específicos.
-          </footer>
-        </ContentCard>
-      </Container>
-    </PolicyWrapper>
+          © 2026 NETVIP TELECOM - Documento de Uso Interno e do Cliente.
+        </footer>
+      </ContentCard>
+    </PageContainer>
   );
 };
 

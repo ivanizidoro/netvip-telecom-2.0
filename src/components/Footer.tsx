@@ -1,6 +1,6 @@
-import React, { useState } from "react"; // Adicionado useState
+import React from "react";
 import styled from "styled-components";
-import { motion } from "framer-motion"; // Adicionado AnimatePresence para animação suave
+import { motion } from "framer-motion";
 import {
   Phone,
   Mail,
@@ -14,12 +14,12 @@ import {
 } from "lucide-react";
 import { Container } from "../styles/GlobalStyles";
 
-// --- SEUS ESTILOS ORIGINAIS (MANTIDOS) ---
 const FooterSection = styled.footer`
   background: var(--gradient-primary);
   color: var(--white);
   position: relative;
   overflow: hidden;
+
   &::before {
     content: "";
     position: absolute;
@@ -38,19 +38,25 @@ const FooterContent = styled.div`
   position: relative;
   z-index: 2;
 `;
+
 const FooterTop = styled.div`
   display: grid;
   grid-template-columns: 2fr 1fr 1fr 1fr;
   gap: 3rem;
   margin-bottom: 3rem;
+
   @media (max-width: 968px) {
     grid-template-columns: 1fr 1fr;
+    gap: 2rem;
   }
+
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
+    gap: 2rem;
     text-align: center;
   }
 `;
+
 const FooterColumn = styled(motion.div)`
   h4 {
     font-size: 1.3rem;
@@ -58,71 +64,86 @@ const FooterColumn = styled(motion.div)`
     margin-bottom: 1.5rem;
     color: var(--primary-orange);
   }
+
   p {
     line-height: 1.7;
     opacity: 0.9;
     margin-bottom: 1.5rem;
   }
 `;
+
 const Logo = styled.div`
   display: flex;
   font-size: 2rem;
   font-weight: 900;
   margin-bottom: 1rem;
   flex-direction: column;
+
   @media (max-width: 768px) {
     justify-content: center;
   }
 `;
+
 const LogoText = styled.span`
   color: var(--white);
   font-weight: 900;
   letter-spacing: -0.5px;
 `;
+
 const LogoOrange = styled.span`
   color: var(--primary-orange);
   font-weight: 900;
 `;
-const LogoText1 = styled.span`
-  color: var(--white);
-  opacity: 0.8;
+
+const LogoText1 = styled.text`
+  background: var(--white);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   font-weight: 900;
   letter-spacing: -0.5px;
   margin-left: 4rem;
   font-size: 0.6rem;
   margin-top: -0.8rem;
 `;
+
 const ContactInfo = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1rem;
 `;
+
 const ContactItem = styled.div`
   display: flex;
   align-items: flex-start;
   gap: 0.8rem;
   opacity: 0.9;
   transition: all 0.3s ease;
+
   &:hover {
     opacity: 1;
     color: var(--primary-orange);
   }
+
   @media (max-width: 768px) {
     justify-content: center;
   }
 `;
+
 const FooterLinks = styled.ul`
   list-style: none;
   display: flex;
   flex-direction: column;
   gap: 0.8rem;
 `;
+
 const FooterLink = styled.li`
   a {
     color: var(--white);
     opacity: 0.8;
     transition: all 0.3s ease;
     cursor: pointer;
+
     &:hover {
       opacity: 1;
       color: var(--primary-orange);
@@ -130,14 +151,17 @@ const FooterLink = styled.li`
     }
   }
 `;
+
 const SocialLinks = styled.div`
   display: flex;
   gap: 1rem;
   margin-top: 1rem;
+
   @media (max-width: 768px) {
     justify-content: center;
   }
 `;
+
 const SocialLink = styled.a`
   width: 45px;
   height: 45px;
@@ -149,12 +173,14 @@ const SocialLink = styled.a`
   color: var(--white);
   transition: all 0.3s ease;
   backdrop-filter: blur(10px);
+
   &:hover {
     background: var(--primary-orange);
     transform: translateY(-3px) scale(1.1);
     box-shadow: 0 10px 25px rgba(255, 122, 0, 0.3);
   }
 `;
+
 const FooterBottom = styled.div`
   border-top: 1px solid rgba(255, 255, 255, 0.2);
   padding-top: 2rem;
@@ -163,15 +189,18 @@ const FooterBottom = styled.div`
   align-items: center;
   flex-wrap: wrap;
   gap: 1rem;
+
   @media (max-width: 768px) {
     flex-direction: column;
     text-align: center;
   }
 `;
+
 const Copyright = styled.div`
   opacity: 0.8;
   font-size: 0.9rem;
 `;
+
 const BackToTop = styled.button`
   background: var(--primary-orange);
   color: var(--white);
@@ -185,21 +214,25 @@ const BackToTop = styled.button`
   cursor: pointer;
   transition: all 0.3s ease;
   box-shadow: 0 5px 15px rgba(255, 122, 0, 0.3);
+
   &:hover {
     transform: translateY(-3px);
     box-shadow: 0 10px 25px rgba(255, 122, 0, 0.4);
   }
 `;
+
 const WhatsAppFloat = styled.div`
   position: fixed;
   bottom: 2rem;
   right: 2rem;
   z-index: 1000;
+
   @media (max-width: 768px) {
     bottom: 1rem;
     right: 1.3rem;
   }
 `;
+
 const WhatsAppButton = styled(motion.button)`
   background: #25d366;
   color: var(--white);
@@ -213,6 +246,7 @@ const WhatsAppButton = styled(motion.button)`
   cursor: pointer;
   box-shadow: 0 5px 20px rgba(37, 211, 102, 0.4);
   transition: all 0.3s ease;
+
   &:hover {
     transform: scale(1.1);
     box-shadow: 0 10px 30px rgba(37, 211, 102, 0.5);
@@ -220,18 +254,20 @@ const WhatsAppButton = styled(motion.button)`
 `;
 
 const Footer: React.FC = () => {
-  const [showPolicy, setShowPolicy] = useState(false); // ESTADO PARA O MODAL
-
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
-    if (element) element.scrollIntoView({ behavior: "smooth" });
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
-  const scrollToTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
   const openWhatsApp = () => {
     const message = encodeURIComponent(
-      "Olá! Gostaria de conhecer os planos da NETVIP TELECOM.",
+      "Olá! Gostaria de conhecer os planos da NETVIP TELECOM."
     );
     window.open(`https://wa.me/5581994030800?text=${message}`, "_blank");
   };
@@ -242,7 +278,6 @@ const Footer: React.FC = () => {
         <Container>
           <FooterContent>
             <FooterTop>
-              {/* Coluna 1: Logo e Social */}
               <FooterColumn
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -259,33 +294,42 @@ const Footer: React.FC = () => {
                 <p>
                   A NETVIP TELECOM é o seu provedor de confiança, oferecendo
                   internet fibra óptica de alta velocidade com tecnologia de
-                  ponta.
+                  ponta e suporte especializado 24 horas por dia.
                 </p>
                 <SocialLinks>
-                  <SocialLink href="#">
+                  <SocialLink href="#" aria-label="Facebook">
                     <Facebook size={20} />
                   </SocialLink>
-                  <SocialLink href="#">
+                  <SocialLink href="#" aria-label="Instagram">
                     <Instagram size={20} />
                   </SocialLink>
-                  <SocialLink href="#">
+                  <SocialLink href="#" aria-label="Twitter">
                     <Twitter size={20} />
                   </SocialLink>
-                  <SocialLink href="#">
+                  <SocialLink href="#" aria-label="YouTube">
                     <Youtube size={20} />
                   </SocialLink>
                 </SocialLinks>
               </FooterColumn>
 
-              {/* Colunas 2 e 3: Links e Serviços (resumidos para o exemplo) */}
-              <FooterColumn>
+              <FooterColumn
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.1 }}
+                viewport={{ once: true }}
+              >
                 <h4>Navegação</h4>
                 <FooterLinks>
                   <FooterLink>
                     <a onClick={() => scrollToSection("home")}>Início</a>
                   </FooterLink>
                   <FooterLink>
-                    <a onClick={() => scrollToSection("plans")}>Planos</a>
+                    <a onClick={() => scrollToSection("about")}>Quem Somos</a>
+                  </FooterLink>
+                  <FooterLink>
+                    <a onClick={() => scrollToSection("plans")}>
+                      Nossos Planos
+                    </a>
                   </FooterLink>
                   <FooterLink>
                     <a onClick={() => scrollToSection("contact")}>Contato</a>
@@ -293,28 +337,46 @@ const Footer: React.FC = () => {
                 </FooterLinks>
               </FooterColumn>
 
-              <FooterColumn>
-                <h4>Suporte</h4>
+              <FooterColumn
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                viewport={{ once: true }}
+              >
+                <h4>Serviços</h4>
                 <FooterLinks>
                   <FooterLink>
-                    <a>Segunda Via</a>
+                    <a>Internet Fibra Óptica</a>
                   </FooterLink>
                   <FooterLink>
-                    <a>Teste de Velocidade</a>
+                    <a>Wi-Fi Residencial</a>
                   </FooterLink>
                   <FooterLink>
-                    <a onClick={() => setShowPolicy(true)}>Privacidade</a>
+                    <a>Internet Empresarial</a>
+                  </FooterLink>
+                  <FooterLink>
+                    <a>Suporte Técnico</a>
+                  </FooterLink>
+                  <FooterLink>
+                    <a>Instalação Gratuita</a>
                   </FooterLink>
                 </FooterLinks>
               </FooterColumn>
 
-              {/* Coluna 4: Endereços */}
-              <FooterColumn>
-                <h4>Contato</h4>
+              <FooterColumn
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+                viewport={{ once: true }}
+              >
+                <h4>Nossos Endereços</h4>
                 <ContactInfo>
                   <ContactItem>
                     <Phone size={18} />
-                    <span>(81) 99403-0800</span>
+                    <div>
+                      <div>(81) 99403-0800</div>
+                      <div>(81) 3499-7444</div>
+                    </div>
                   </ContactItem>
                   <ContactItem>
                     <Mail size={18} />
@@ -322,7 +384,18 @@ const Footer: React.FC = () => {
                   </ContactItem>
                   <ContactItem>
                     <MapPin size={18} />
-                    <span>Carpina - PE</span>
+                    <div>
+                      <div>
+                        <strong>Sede:</strong> Av. da Bandeira, 291
+                      </div>
+                      <div>Carpina - PE</div>
+                      <br />
+                      <div>
+                        <strong>Filiais:</strong>
+                      </div>
+                      <div>• Lagoa de Itaenga - PE</div>
+                      <div>• Tracunhaém - PE</div>
+                    </div>
                   </ContactItem>
                 </ContactInfo>
               </FooterColumn>
@@ -330,17 +403,17 @@ const Footer: React.FC = () => {
 
             <FooterBottom>
               <Copyright>
-                © 2026 NETVIP TELECOM - Todos os direitos reservados.
-                <br />
-                <a
-                  href="https://www.ivanizidoro.com.br"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  SITE DESENVOLVIDO POR IVAN IZIDORO.
-                </a>
+                © 2026 NETVIP TELECOM - Todos os direitos reservados. Criado por{" "}
+                <strong>
+                  <a
+                    href="https://www.ivanizidoro.com.br"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    IVAN IZIDORO
+                  </a>
+                </strong>
               </Copyright>
-
               <BackToTop onClick={scrollToTop} aria-label="Voltar ao topo">
                 <ArrowUp size={20} />
               </BackToTop>
@@ -352,8 +425,17 @@ const Footer: React.FC = () => {
       <WhatsAppFloat>
         <WhatsAppButton
           onClick={openWhatsApp}
-          animate={{ y: [0, -10, 0] }}
-          transition={{ duration: 2, repeat: Infinity }}
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.95 }}
+          animate={{
+            y: [0, -10, 0],
+          }}
+          transition={{
+            duration: 2,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+          aria-label="Contato via WhatsApp"
         >
           <MessageCircle size={28} />
         </WhatsAppButton>
