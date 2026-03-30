@@ -9,6 +9,7 @@ import AboutPage from "./pages/AboutPage";
 import PlansPage from "./pages/PlansPage";
 import ContactPage from "./pages/ContactPage";
 import CareersPage from "./pages/CareersPage";
+import Politica from "./components/politica";
 
 function App() {
   const [isWelcomePopupOpen, setIsWelcomePopupOpen] = useState(false);
@@ -36,6 +37,7 @@ function App() {
         <Route path="/planos" element={<PlansPage />} />
         <Route path="/contato" element={<ContactPage />} />
         <Route path="/trabalhe-conosco" element={<CareersPage />} />
+        <Route path="/politica" element={<Politica />} />
       </Routes>
       <Footer />
     </Router>
