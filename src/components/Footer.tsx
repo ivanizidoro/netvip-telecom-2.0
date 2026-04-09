@@ -375,7 +375,7 @@ const Footer: React.FC = () => {
                     <Phone size={18} />
                     <div>
                       <div>(81) 99403-0800</div>
-                      <div>(81) 3499-7444</div>
+                      <div>(81) 3299-7444</div>
                     </div>
                   </ContactItem>
                   <ContactItem>

@@ -338,7 +338,7 @@ const Header: React.FC = () => {
                 @netvipprovedor
               </a>
             </span>
-            <span>📞 (81) 99403-0800 / (81) 99789-5571 / (81) 3499-7444</span>
+            <span>📞 (81) 99403-0800 / (81) 99789-5571 / (81) 3299-7444</span>
           </ContactInfo>
         </TopBarContent>
       </TopBar>
