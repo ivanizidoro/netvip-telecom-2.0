@@ -286,7 +286,7 @@ const MobilePlans: React.FC = () => {
       price: "39,90",
       featured: false,
       features: [
-        "10GB + 6GB exclusivo para YouTube",
+        "10GB + 5GB exclusivo para YouTube",
         "5GB de bônus na portabilidade",
         "1GB de bônus de recarga digital",
         "Ligações ilimitadas",
@@ -298,7 +298,7 @@ const MobilePlans: React.FC = () => {
       price: "54,90",
       featured: true,
       features: [
-        "20GB + 6GB exclusivo para YouTube",
+        "20GB + 5GB exclusivo para YouTube",
         "5GB de bônus na portabilidade",
         "1GB de bônus de recarga digital",
         "Ligações ilimitadas",
@@ -310,7 +310,7 @@ const MobilePlans: React.FC = () => {
       price: "64,90",
       featured: false,
       features: [
-        "25GB + 6GB exclusivo para YouTube",
+        "25GB + 5GB exclusivo para YouTube",
         "5GB de bônus na portabilidade",
         "1GB de bônus de recarga digital",
         "Ligações ilimitadas",
