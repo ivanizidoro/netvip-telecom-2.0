@@ -9,6 +9,7 @@ import {
   Instagram,
 } from "lucide-react";
 import { Button } from "../styles/GlobalStyles";
+import { FaWhatsapp } from "react-icons/fa";
 
 const TopBar = styled.div`
   background: var(--gradient-secondary);
@@ -370,7 +371,7 @@ const Header: React.FC = () => {
 
           <ActionButtons>
             <WhatsAppButton variant="secondary">
-              <MessageCircle size={16} />
+              <FaWhatsapp size={16} />
               <a
                 href="https://wa.me/5581994030800"
                 target="_blank"

@@ -1,1 +1,91 @@
-node_modules
+# ==========================================
+# Dependências e Gerenciadores de Pacotes
+# ==========================================
+/node_modules
+/.pnp
+.pnp.*
+
+# pnpm específico
+.pnpm-store/
+store/
+
+# Yarn (se ainda houver resíduos)
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+
+# ==========================================
+# Builds e Output
+# ==========================================
+# Next.js
+/.next/
+/out/
+
+# Production builds genéricos
+/build
+/dist
+
+# TypeScript / Turbopack
+*.tsbuildinfo
+next-env.d.ts
+.turbo/
+
+# ==========================================
+# Testes e Cobertura
+# ==========================================
+/coverage
+/.nyc_output
+
+# ==========================================
+# Logs e Debug
+# ==========================================
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+pnpm-debug.log*
+
+# ==========================================
+# Variáveis de Ambiente e Segurança
+# ==========================================
+# Oculta todos os arquivos de env por padrão
+.env*
+# Garante que exemplos commitados fiquem visíveis (se existirem)
+!.env.example
+!.env.sample
+
+# Certificados / Chaves
+*.pem
+*.key
+*.crt
+
+# ==========================================
+# Vercel & Deploy
+# ==========================================
+.vercel
+
+# ==========================================
+# Sistema Operacional e IDEs
+# ==========================================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDEs / Editores
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
