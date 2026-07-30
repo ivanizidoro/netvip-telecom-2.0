@@ -9,10 +9,10 @@ import {
   Instagram,
   Twitter,
   Youtube,
-  MessageCircleDashed as MessageCircle,
-  ArrowUp,
+  ArrowUp
 } from "lucide-react";
 import { Container } from "../styles/GlobalStyles";
+import { FaWhatsapp } from "react-icons/fa";
 
 const FooterSection = styled.footer`
   background: var(--gradient-primary);
@@ -267,7 +267,7 @@ const Footer: React.FC = () => {
 
   const openWhatsApp = () => {
     const message = encodeURIComponent(
-      "Olá! Gostaria de conhecer os planos da NETVIP TELECOM."
+      "Olá! Gostaria de conhecer os planos da NETVIP TELECOM.",
     );
     window.open(`https://wa.me/5581994030800?text=${message}`, "_blank");
   };
@@ -437,7 +437,7 @@ const Footer: React.FC = () => {
           }}
           aria-label="Contato via WhatsApp"
         >
-          <MessageCircle size={28} />
+          <FaWhatsapp size={28} />
         </WhatsAppButton>
       </WhatsAppFloat>
     </>
