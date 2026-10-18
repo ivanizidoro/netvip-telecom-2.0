@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import {Smartphone, Download, Zap, CreditCard, BarChart3, Bell} from 'lucide-react';
 import { Container } from '../styles/GlobalStyles';
+import mobile from '../assets/WhatsApp.png';
 
 const AppSection = styled.section`
   padding: 6rem 0;
@@ -371,7 +372,7 @@ const AppDownload: React.FC = () => {
             >
               <PhoneScreen>
                 <img 
-                  src="https://static.lumi.new/aa/aa34624fa60ae89034e17d0b1c980086.webp" 
+                  src={mobile}
                   alt="NETVIP TELECOM App Interface"
                 />
               </PhoneScreen>

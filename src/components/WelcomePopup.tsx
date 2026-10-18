@@ -133,8 +133,8 @@ const WelcomePopup: React.FC<WelcomePopupProps> = ({ isOpen, onClose }) => {
             </CloseButton>
 
             <PromoImage
-              src="https://cdn-static-lumi.artvibe.ai/c3/c32945504e128bc126471a2adbe05a85.webp"
-              alt="Net VIP agora é 5G - Planos Móveis"
+              src=""
+              alt=""
             />
           </ModalContent>
         </ModalOverlay>

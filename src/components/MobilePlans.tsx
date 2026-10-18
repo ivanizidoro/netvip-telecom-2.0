@@ -282,37 +282,35 @@ const PlanButton = styled(Button)`
 const MobilePlans: React.FC = () => {
   const mobilePlans = [
     {
-      data: "21",
+      data: "30",
       price: "39,90",
       featured: false,
       features: [
-        "10GB + 5GB exclusivo para YouTube",
+        "15GB + 5GB exclusivo para YouTube",
+        "5GB de bônus",
         "5GB de bônus na portabilidade",
-        "1GB de bônus de recarga digital",
         "Ligações ilimitadas",
         "Telefonia celular",
       ],
     },
     {
-      data: "26",
+      data: "35",
       price: "54,90",
       featured: true,
       features: [
-        "20GB + 5GB exclusivo para YouTube",
+        "35GB",
         "5GB de bônus na portabilidade",
-        "1GB de bônus de recarga digital",
         "Ligações ilimitadas",
         "Telefonia celular",
       ],
     },
     {
-      data: "31",
+      data: "45",
       price: "64,90",
       featured: false,
       features: [
-        "25GB + 5GB exclusivo para YouTube",
+        "40GB",
         "5GB de bônus na portabilidade",
-        "1GB de bônus de recarga digital",
         "Ligações ilimitadas",
         "Telefonia celular",
       ],

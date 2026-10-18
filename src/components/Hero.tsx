@@ -26,7 +26,8 @@ const HeroBackground = styled.div`
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: radial-gradient(
+  background-image:
+    radial-gradient(
       circle at 20% 50%,
       rgba(255, 122, 0, 0.15) 0%,
       transparent 50%
@@ -268,7 +269,6 @@ const CardSubtitle = styled.div`
   font-weight: 500;
 `;
 
-
 const Hero: React.FC = () => {
   const navigate = useNavigate();
 
@@ -359,6 +359,10 @@ const Hero: React.FC = () => {
               whileHover={{ scale: 1.02, rotateY: 5 }}
               transition={{ duration: 0.3 }}
             >
+              <SpeedLabel>
+                Planos a partir <br />
+                de
+              </SpeedLabel>
               <SpeedDisplay>1000</SpeedDisplay>
               <SpeedLabel>MEGA</SpeedLabel>
               <PlanHighlight>Plano Premium</PlanHighlight>
